@@ -8,18 +8,20 @@
 
 
 
-# def fun_pascaltrianglevalue(row, col):
-# 	if col == 0:
-# 		return 1
-# 	elif row == 0:
-# 		return 0
-# 	else:
-# 		return fun_pascaltrianglevalue(row-1, col) + fun_pascaltrianglevalue(row-1, col-1)
-
 def fun_pascaltrianglevalue(row, col):
 	if col == 0:
 		return 1
 	elif row == 0:
 		return 0
 	else:
-		return (row * fun_pascaltrianglevalue(row-1, col-1))/col
+		return fun_pascaltrianglevalue(row-1, col) + fun_pascaltrianglevalue(row-1, col-1)
+
+# def fun_pascaltrianglevalue(row, col):
+# 	if col == 0:
+# 		return 1
+# 	elif row == 0:
+# 		return 0
+# 	else:
+# 		return (row * fun_pascaltrianglevalue(row-1, col-1))/col
+
+
