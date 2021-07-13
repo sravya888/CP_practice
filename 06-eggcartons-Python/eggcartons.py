@@ -6,4 +6,8 @@
 
 def fun_eggcartons(eggs):
 	# your code goes here
-	return 1
+	egg = eggs//12
+	remaining = eggs%12
+	if(remaining):
+		egg = egg + 1
+	return egg
