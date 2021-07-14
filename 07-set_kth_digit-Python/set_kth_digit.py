@@ -23,5 +23,3 @@ def fun_set_kth_digit(n,k,d):
 		return -z
 	else:
 		return z
-
-
