@@ -6,10 +6,22 @@
 
 
 
-def fun_set_kth_digit(digit,k):
-	s=abs(digit)//(10**k)
-	if(s==0):
-		return 0
+def fun_set_kth_digit(n,k,d):
+	temp = 0
+	if n < 0:
+		temp = 1
+	n = abs(n)
+	n = str(n)
+	n = n[::-1]
+	d = str(d)
+	p = n[:k]
+	q = n[k+1:]
+	z = p+d+q
+	z = z[::-1]
+	z = int(z)
+	if temp == 1:
+		return -z
 	else:
-		return s%10
+		return z
+
 
