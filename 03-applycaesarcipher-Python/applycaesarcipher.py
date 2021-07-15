@@ -11,7 +11,45 @@
 
 
 def fun_applycaesarcipher(msg, shift):
-	return ""
+	# letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+	# lo ="abcdefghijklmnopqrstuvwxyz"
+	# en =""
+
+	for k in range((26)):
+		trans = ""
+		for s in msg:
+			if s == " ":
+				trans = trans + " "
+			elif (s.islower()):
+				
+				trans += chr((ord(s) + shift - 97)%26+97)
+					# n = lo.find(s)
+					# n = n + shift
+					# if n< 0:
+					# 	n = n + len(letters)
+					# 	trans = trans + lo[n]
+					# elif n>len(letters):
+					# 	n = n - len(letters)
+					# 	trans = trans - lo[n]
+					# else:
+					# 	trans = trans + lo[n]
+			else:
+				
+				trans += chr((ord(s) + shift - 65)%26+65)
+
+					# n = letters.find(s)
+					# n = n + shift
+					# if n< 0:
+					# 	n = n + len(letters)
+					# 	trans = trans + letters[n]
+					# elif n>len(letters):
+					# 	n = n - len(letters)
+					# 	trans = trans - letters[n]
+					# else:
+					# 	trans = trans + letters[n] 
+
+
+	return trans
 
 
 
