@@ -4,6 +4,8 @@
 # will probably wish to use Heron's Formula.
 
 
-def trianglearea(s1, s2, s3):
-	# your code goes here
-	pass
+def trianglearea(a, b, c):
+	s=(a+b+c)/2
+	area=((s-a)*(s-b)*(s-c)*s)**0.5
+	return area
+
