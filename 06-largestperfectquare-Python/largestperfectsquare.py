@@ -7,6 +7,24 @@
 # Hint: you may wish to use a similar approach to how you solved isPerfectSquare on the hw.
 # Another hint: This can be written using just one or two lines of Python.
 
-def largestperfectsquare(n):
-	# your code goes here
-	pass
+def ismostlymagicsquare(arr):
+    leftdiag=0
+    rightdiag=0
+    n=len(arr)
+    for i in range(n):
+        leftdiag +=arr[i][i]
+        rightdiag+=arr[i][n-i-1]
+    if leftdiag != rightdiag:
+        return False
+    
+    
+    for i in range(n):
+        row=0
+        col=0
+        for j in range(n):
+            row+=arr[i][i]
+            col+=arr[j][i]
+            
+        if row!= leftdiag and col!=leftdiag:
+            return False
+    return True
