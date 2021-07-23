@@ -5,6 +5,13 @@
 # returns 3. Note that if any balls must be in a row, then you count that row, and so 
 # numberOfPoolBallRows(7) returns 4 (since the 4th row must have a single ball in it).
 
-def fun_numberofpoolballrows(balls):
-	return 0
+def numberofpoolballs(balls):
+
+    l=list()
+  
+    for i in range(balls+1):
+        if i<=balls:
+            l.append(i)
+            s=sum(l)
+    return s
 
