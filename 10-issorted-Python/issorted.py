@@ -5,6 +5,32 @@
 # learn soon, it runs in O(n) time, where n=len(a)), and so in particular you may not sort 
 # the list.
 
+def isasc(a):
+	flag=0
+	i=1
+	while i<len(a):
+		if a[i]<a[i-1]:
+			flag=1
+		i=i+1
+	if not flag:
+		return True
+	else:
+		return False
+
+def isdesc(a):
+	flag=0
+	i=1
+	while i<len(a):
+		if a[i]>a[i-1]:
+			flag=1
+		i=i+1
+	if not flag:
+		return True
+	else:
+		return False
+
 def issorted(a):
-	# your code goes here
-	pass
+	if isasc(a) or isdesc(a):
+		return True
+	else:
+		return False
