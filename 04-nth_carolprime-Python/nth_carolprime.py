@@ -7,6 +7,7 @@
 # will return a 12-digit answer! In particular, this means you cannot just edit isPrime. 
 # Hint: you may need to generate only Carol numbers, and then test those as you go 
 # for primality (and you may need to think about that hint for a while for it to make sense!).
+ 
 
 
 def fun_nth_carolprime(n):
