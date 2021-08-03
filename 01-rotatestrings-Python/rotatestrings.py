@@ -4,8 +4,24 @@
 # assert(rotateString('abcd',  1) == 'bcda')
 # assert(rotateString('abcd', -1) == 'dabc')
 
-
+def rotate(s,d):
+	tmp = s[d:] + s[0:d]
+	return tmp
 
 def fun_rotatestrings(s, n):
-	return s
+	if n==0:
+		return s
+	elif n<0:
+		n = abs(n)
+		d = len(s) -n
+		return rotate(s,len(s)-n)
+
+
+	elif n > len(s):
+		
+		return rotate(s, n-5)
+	else:
+		return rotate(s,n)
+
+	
 
